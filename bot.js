@@ -1,4 +1,4 @@
-var token = '647032251:AAFrDzy2LeprLwcGfBJMHlCuRwtLh2bDrlQ';
+var token = process.env.TOKEN_API;
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });
@@ -32,32 +32,12 @@ var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
 
 console.log('iniciando bot...');
 
-// hello command
-/*bot.onText(/^\/say_hello (.+)$/, function (msg, match) {
-  var name = match[1];
-  bot.sendMessage(msg.chat.id, 'Hello ' + name + '!').then(function () {
-    // reply sent!
-  });
-});
 
-// sum command
-bot.onText(/^\/sum((\s+\d+)+)$/, function (msg, match) {
-  var result = 0;
-  match[1].trim().split(/\s+/).forEach(function (i) {
-    result += (+i || 0);
-  })
-  bot.sendMessage(msg.chat.id, result).then(function () {
-    // reply sent!
-  });
-});
-*/
 bot.on('message', (msg) => {
 var mensaje = msg.text.toString().toLowerCase();
 var msj = mensaje.search("manya");
 var msj2 = mensaje.search("peñarol");
 if ((msj !== -1) || (msj2 !== -1)) {
-    //bot.sendMessage(msg.chat.id, esp[Math.floor(Math.random() * 3)] + " " + esp[Math.floor(Math.random() * 3)] + " " + esp[Math.floor(Math.random() * 3)] + "," + " " + msg.from.first_name);
     bot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 25)]);
-    //console.log('si');
 }
 });
