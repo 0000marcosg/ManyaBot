@@ -5,9 +5,8 @@ A node.js telegram bot who loves Peñarol
 Requiere Node.js y los siguientes paquetes:
  
 ```
-npm init`
+npm init
 npm install --save node-telegram-bot-api
-
 ```
 Y para correrlo en Heroku
 
