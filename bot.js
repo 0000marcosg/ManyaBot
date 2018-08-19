@@ -1,4 +1,5 @@
-var token = process.env.TOKEN_API;
+//var token = process.env.TOKEN_API;
+var token = '682559547:AAFNEJ4yHUWDL2WyV5SwxlepuXuRexQ1oks';
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });
@@ -94,12 +95,17 @@ console.log('iniciando bot...');
 
 bot.on('message', (msg) => {
 var mensaje = msg.text.toString().toLowerCase();
-var spl = splitTokens(mensaje, "., -?/");;
+var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\,', '\\\.'];
+//console.log(separators.join('|'));
+var spl = mensaje.split(new RegExp(separators.join('|'), 'g'));
+//console.log(spl);
+//console.log(mensaje);
 
 for(var i = 0; i < spl.length; i++){
   for (var j = 0; j < palabras_clave.length; j++){
     if (spl[i] == palabras_clave[j]){
       bot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
+      //console.log("SI!");
     }
   }
 }
