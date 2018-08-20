@@ -1,4 +1,4 @@
-//var token = process.env.TOKEN_API;
+var token = process.env.TOKEN_API;
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });
