@@ -2,7 +2,7 @@ var token = process.env.TOKEN_API;
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });
-
+//Esto es peñarol PAPAAAAAA
 //var esp = ['esto','es','peñarol'];
 var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
 'Peñarol se rebeló contra el país del no te metas','Antes de ser uruguayo soy jugador de Peñarol',
