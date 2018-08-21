@@ -2,7 +2,7 @@ var token = process.env.TOKEN_API;
 
 var Bot = require('node-telegram-bot-api'),
     bot = new Bot(token, { polling: true });
-
+//Esto es peñarol PAPAAAAAA
 //var esp = ['esto','es','peñarol'];
 var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
 'Peñarol se rebeló contra el país del no te metas','Antes de ser uruguayo soy jugador de Peñarol',
@@ -72,7 +72,7 @@ var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
 'Aquel Peñarol tenía un vestuario bárbaro, por eso se lograron tantos objetivos',
 'Se venía Juan Ramón Verón…Lo colgué contra el alambrado y me expulsaron. Pero merecía cadena perpetua',
 'A 24 horas de ese momento, vuelvo a vivirlo y reafirmo el concepto inicial: el fútbol es único. Pero a la sentencia le hace falta un cierre que lo perfeccione y le otorgue justicia: Peñarol también es único',
-'ugar la Libertadores con la camiseta de Peñarol es un compromiso, y colmar las ilusiones de miles de personas, mucho más',
+'Jugar la Libertadores con la camiseta de Peñarol es un compromiso, y colmar las ilusiones de miles de personas, mucho más',
 'Me siento parte de Peñarol o Peñarol es parte de mí',
 'En el fútbol de la década del 30 no sabíamos lo que era el pase atrás, siempre íbamos para adelante',
 'Lo que yo trato de inculcarle a los jugadores es el respeto a la profesión, a Peñarol',
