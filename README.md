@@ -18,7 +18,7 @@ Para agregar funcionalidades solo es necesario editar el archivo bot.js. Los dem
 
 ### TODO:
 
-- [ ] Agregar mas frases mas frases al detectar las palabras "Manya" o "Peñarol".
-- [ ] Responder con imagenes o mensajes de audio a determinadas frases.
+- [x] Agregar mas frases al detectar las palabras "Manya" o "Peñarol".
+- [x] Responder con imagenes o mensajes de audio a determinadas frases.
 - [ ] Responder con frases especiales a los mensajes de pregunta.
 - [ ] Responder con frases especiales a los mensajes con mas de X caracteres.
