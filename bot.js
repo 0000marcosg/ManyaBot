@@ -1,6 +1,6 @@
 var token = process.env.TOKEN_API;
 
-var Bot = require('node-telegram-ManyaBot-api'),
+var Bot = require('node-telegram-bot-api'),
     ManyaBot = new Bot(token, { polling: true });
 //Esto es peñarol PAPAAAAAA
 //var esp = ['esto','es','peñarol'];
