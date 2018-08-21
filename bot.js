@@ -1,12 +1,14 @@
 var token = process.env.TOKEN_API;
 
 var Bot = require('node-telegram-bot-api'),
-    bot = new Bot(token, { polling: true });
-
+    ManyaBot = new Bot(token, { polling: true });
+//Esto es peñarol PAPAAAAAA
 //var esp = ['esto','es','peñarol'];
 var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
-'Peñarol se rebeló contra el país del no te metas','Antes de ser uruguayo soy jugador de Peñarol',
-'O juego en Peñarol o dejo el fútbol','Me sabían peñarolense y depuse mi enojo para servir a la querida causa',
+'Peñarol se rebeló contra el país del no te metas',
+'Antes de ser uruguayo soy jugador de Peñarol',
+'O juego en Peñarol o dejo el fútbol',
+'Me sabían peñarolense y depuse mi enojo para servir a la querida causa',
 'Me queda poco, pero ese poco está al servicio de Peñarol',
 'Tiempos de Gradín y Campolo… ¡Peñarol! Tardes de lluvia y de sol',
 'Vengo a salir campeón de América y del Mundo con Peñarol',
@@ -87,14 +89,18 @@ var esp = ['Serás eterno como el tiempo y florecerás en cada primavera',
 'Peñarol. Un ideal deportivo que florece en un país generoso y bueno'
 ];
 
+var img = ['https://media.giphy.com/media/2dmXKAg6zvHqU6iQOa/giphy.gif'/*Gordo de la colombes*/,
+'https://media.giphy.com/media/3LCOW3kEOKUvJyGgig/giphy.gif'/*peñarol con el bebe*/,
+'https://media.giphy.com/media/25R4DKLa1i9BBtVQTo/giphy.gif'/*peñarol inteligencia*/];
+
 var palabras_clave = ["peñarol", "manya", "peñarolense", "carbonero", "aurinegro"];
 
-console.log('iniciando bot...');
+console.log('iniciando ManyaBot...');
 
 
-bot.on('message', (msg) => {
+ManyaBot.on('message', (msg) => {
 var mensaje = msg.text.toString().toLowerCase();
-var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\,', '\\\.'];
+var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\,', '\\\.', '\\\!','\\\"'];
 //console.log(separators.join('|'));
 var spl = mensaje.split(new RegExp(separators.join('|'), 'g'));
 //console.log(spl);
@@ -103,16 +109,19 @@ var spl = mensaje.split(new RegExp(separators.join('|'), 'g'));
 for(var i = 0; i < spl.length; i++){
   for (var j = 0; j < palabras_clave.length; j++){
     if (spl[i] == palabras_clave[j]){
-      bot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
+      ManyaBot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
       //console.log("SI!");
     }
   }
 }
-
+if (mensaje.search("buena idea") !== -1)
+{
+	ManyaBot.sendDocument(msg.chat.id,img[Math.floor(Math.random()*3)]);
+}
 //var msj = mensaje.search("manya");
 //var msj2 = mensaje.search("peñarol");
 
 /*if ((msj !== -1) || (msj2 !== -1)) {
-    bot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
+    ManyaBot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
 }*/
 });
