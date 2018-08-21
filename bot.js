@@ -100,7 +100,7 @@ console.log('iniciando ManyaBot...');
 
 ManyaBot.on('message', (msg) => {
 var mensaje = msg.text.toString().toLowerCase();
-var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\,', '\\\.'];
+var separators = [' ', '\\\+', '-', '\\\(', '\\\)', '\\*', '/', ':', '\\\?', '\\\,', '\\\.', '\\\!','\\\"'];
 //console.log(separators.join('|'));
 var spl = mensaje.split(new RegExp(separators.join('|'), 'g'));
 //console.log(spl);
