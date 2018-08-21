@@ -109,14 +109,14 @@ var spl = mensaje.split(new RegExp(separators.join('|'), 'g'));
 for(var i = 0; i < spl.length; i++){
   for (var j = 0; j < palabras_clave.length; j++){
     if (spl[i] == palabras_clave[j]){
-      ManyaBot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * 82)]);
+      ManyaBot.sendMessage(msg.chat.id, "Pero " + msg.from.first_name + ", " + esp[Math.floor(Math.random() * esp.length)]);
       //console.log("SI!");
     }
   }
 }
 if (mensaje.search("buena idea") !== -1)
 {
-	ManyaBot.sendDocument(msg.chat.id,img[Math.floor(Math.random()*3)]);
+	ManyaBot.sendDocument(msg.chat.id,img[Math.floor(Math.random()*img.length)]);
 }
 
 var date = new Date();
