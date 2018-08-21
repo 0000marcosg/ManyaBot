@@ -118,6 +118,13 @@ if (mensaje.search("buena idea") !== -1)
 {
 	ManyaBot.sendDocument(msg.chat.id,img[Math.floor(Math.random()*3)]);
 }
+	
+if (mensaje.search("lucia") !== -1){
+
+	ManyaBot.sendMessage(msg.chat.id, "Bo, esto me hace acordar de algo: hoy, 21 de agosto es la graduacion de Lucia!");
+	ManyaBot.sendDocument(msg.chat.id,img[2]);
+
+}
 //var msj = mensaje.search("manya");
 //var msj2 = mensaje.search("peñarol");
 
