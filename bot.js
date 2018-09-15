@@ -123,10 +123,11 @@ var date = new Date();
 var d = date.getDate();
 var m = date.getMonth() + 1;
 
-if ((mensaje.search("lucia") !== -1) &&(d == 21) && (m == 8)){
+if ((mensaje.search("daniela") !== -1) &&(d == 15) && (m == 9)){
 
-	ManyaBot.sendMessage(msg.chat.id, "Bo, esto me hace acordar de algo: hoy, 21 de agosto es la graduacion de Lucia!");
-	ManyaBot.sendDocument(msg.chat.id,img[2]);
+	//ManyaBot.sendMessage(msg.chat.id, "Bo, esto me hace acordar de algo: hoy, 21 de agosto es la graduacion de Lucia!");
+	ManyaBot.sendMessage(msg.chat.id, "Ya que estamos hablando del tema, me gustaría saludar a Daniela en su cumpleaños. ¡Feliz cumpleaños, Dani! Serás eterna como el tiempo y floreceras en cada primavera, como Peñarol. ¡Felicidades! ¡Oro y Carbón!");
+	//ManyaBot.sendDocument(msg.chat.id,img[2]);
 
 }
 //var msj = mensaje.search("manya");
