@@ -134,8 +134,8 @@ if ((mensaje.search("daniela") !== -1) &&(d == 15) && (m == 9)){
 	if ((mensaje.search("importante") !== -1) &&(d <= 19) && (m == 12)){
 
 	//ManyaBot.sendMessage(msg.chat.id, "Bo, esto me hace acordar de algo: hoy, 21 de agosto es la graduacion de Lucia!");
-	ManyaBot.sendMessage(msg.chat.id, "¿Importante? Importante es que el miércoles se hace una despedida de verdad en Emprender. Seguramente en la casa de Enzo, pero se confirma después. ¡Vamos Peñarol!
-			");
+	ManyaBot.sendMessage(msg.chat.id, "¿Importante? Importante es que el miércoles se hace una despedida de verdad en Emprender. Seguramente en la casa de Enzo, pero se confirma después. ¡Vamos Peñarol!");
+			
 	//ManyaBot.sendDocument(msg.chat.id,img[2]);
 
 }
