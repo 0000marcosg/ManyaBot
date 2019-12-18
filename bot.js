@@ -131,14 +131,15 @@ if ((mensaje.search("daniela") !== -1) &&(d == 15) && (m == 9)){
 
 }
 	
-	if ((mensaje.search("importante") !== -1) &&(d <= 19) && (m == 12)){
+	if ((mensaje.search("despedida") !== -1) &&(d <= 28) && (m == 12)){
 
 	//ManyaBot.sendMessage(msg.chat.id, "Bo, esto me hace acordar de algo: hoy, 21 de agosto es la graduacion de Lucia!");
-	ManyaBot.sendMessage(msg.chat.id, "¿Importante? Importante es que el miércoles se hace una despedida de verdad en Emprender. Seguramente en la casa de Enzo, pero se confirma después. ¡Vamos Peñarol!");
-			
-	//ManyaBot.sendDocument(msg.chat.id,img[2]);
+	//ManyaBot.sendMessage(msg.chat.id, "¿Importante? Importante es que el miércoles se hace una despedida de verdad en Emprender. Seguramente en la casa de Enzo, pero se confirma después. ¡Vamos Peñarol!");
+	ManyaBot.sendMessage(msg.chat.id, "¡Despedida, papá! Es el 28, gurises. ¿En la casa de Dani?, ¿En algun bar? Quien sabe, la cosa es que C A C ¡Vamos Peñarol!");		
+	ManyaBot.sendDocument(msg.chat.id,img[2]);
 
 }
+	
 //var msj = mensaje.search("manya");
 //var msj2 = mensaje.search("peñarol");
 
